@@ -1,0 +1,114 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.4);
+    z-index: 4;
+    padding-top: 5px;
+}
+
+body{
+    background-color: black;
+}
+
+#container{
+    background-color: black;
+    justify-content: center;
+}
+
+#buyMeLunchBox{
+    
+    height: 40px; 
+    background-color: transparent;
+    margin-top: 5px; margin-right: 5px; 
+
+    font-family: 'inter'; 
+    border-radius: 10px; 
+    border: 2px solid white; 
+    color: white;
+}
+
+
+
+#section1{
+    font-family: 'inter';
+    height: 100vh;
+    width: 100vW;
+    background-image: url('/Contest-Feed/assetes/pexels-neo-2653362.jpg');
+    background-size: cover;
+    
+    color: white;
+}
+
+
+#title{
+    font-size: 100px;
+    margin-left: 20px;
+    padding-top: 10rem;
+    line-height: 120px;
+}
+#title div{
+    font-size: 170px;
+    margin-left: -10px;
+}
+
+#description{
+    margin-top: 20px;
+    text-align: left;
+    width: 540px;
+    margin-left: 30px;
+    line-height: 25px;
+    /* background-color: antiquewhite; */
+}
+
+#section2{
+    height: 100vh;
+    width: 100vw;
+    background-color: #0d0e16;
+    font-family: 'inter';
+}
+
+#cardsContainer{
+    width: 90%;
+    height: 90%;
+    /* background-color:rgb(0, 0, 0) */
+    background-image: url('/Contest-Feed/assetes/Contest-Feed-logos/Contest-Feed-logos_white.png');
+
+    background-size: cover;
+    background-position: center;
+}
+
+#searchBox{
+    padding: 10px;
+    /* border: 2px solid lightskyblue; */
+    margin-top: 50px;
+    gap: 4px;
+}
+
+#searchBox input{
+    width: 40%;
+    padding: 4px;
+    font-size: 20px;
+    border-radius: 0%;
+    border: 0px;
+}
+
+#searchBox input:focus{
+    -webkit-outline: 2px solid darkcyan;
+    -moz-outline: 2px solid darkcyan;
+    outline: 2px solid darkcyan;
+}
+
+#searchBox button{
+    border-radius: 0%;
+    border:2px solid darkcyan;
+    background-color: transparent;
+    color: darkcyan;
+    width: 100px;
+    font-size: large;
+}
