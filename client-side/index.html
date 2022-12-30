@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,11 @@
     <title>Contests-Feed</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="util.css">
+
 </head>
+
 <body>
-    
+
     <div id="container">
 
         <header>
@@ -35,26 +38,227 @@
                 </div>
 
                 <div id="description">
-                    This Website provides you live ongoing and upcoming coding contests information. Currently we support only few APIs If you want more services from us so please donate us by clicking on (Buy Me Lunch Box).
+                    Welcome to Contest-Feed! Our website provides live details of ongoing and upcoming coding contests
+                    from popular platforms like Codeforces, Codechef, HackerEarth, and AtCoder. We are constantly
+                    expanding our list of supported platforms, so be sure to check back often for updates.
+                    <br>
+                    In addition to providing live contest updates, our website also offers a convenient way for users to
+                    support the work we do. By clicking on the 'Buy Me Lunch' button, you can donate a small amount of
+                    money towards our team's lunch expenses. Thank you for your support!
+                    <br>
+                    We hope you find Contest-Feed to be a useful resource for staying up-to-date on the latest coding
+                    contests. Happy coding!
                 </div>
 
             </section>
 
-            
-            <section id="section2" class="flex jc-center ai-center">
+            <section id="section2" class="flex jc-center ai-center f-direction-column">
 
+                <div id="searchBox" class="flex jc-center">
+                    <select name="select" id="selectType">
+                        <option value="Ongoing-Contests">Ongoing-Contests</option>
+                        <option value="Upcoming-Contests">Upcoming-Contests</option>
+                    </select>
+                </div>
+                
                 <div id="cardsContainer">
-                    <div id="searchBox" class="flex jc-center">
-                        <input type="text">
-                        <button>Search</button>
+                    <div id="cardHolder" class="flex jc-center f-flow-row-wrap">
+                        <div class="card">
+                            <img src="/Contest-Feed/assetes/lunch-svgrepo-com.svg" alt="John" style="width:50%">
+                            <h1>Contest Name</h1>
+                            <p class="cardTitle">Status</p>
+                            <p class="cardOrgName">Organizer Name</p>
+                            <div style="margin: 24px 0;">
+                                <a href="#"><i class="link"></i></a>
+                            </div>
+                            <div class="flex jc-space-between">
+                                <code style="margin-left: 4px; margin-bottom: 4px;">Start time</code>
+                                <code style="margin-right: 4px;">End Time</code>
+                            </div>
+                            <p><button>Apply</button></p>
+                        </div>
+
+                        <div class="card">
+                            <img src="/Contest-Feed/assetes/lunch-svgrepo-com.svg" alt="John" style="width:50%">
+                            <h1>Contest Name</h1>
+                            <p class="cardTitle">Status</p>
+                            <p class="cardOrgName">Organizer Name</p>
+                            <div style="margin: 24px 0;">
+                                <a href="#"><i class="link"></i></a>
+                            </div>
+                            <div class="flex jc-space-between">
+                                <code style="margin-left: 4px; margin-bottom: 4px;">Start time</code>
+                                <code style="margin-right: 4px;">End Time</code>
+                            </div>
+                            <p><button>Apply</button></p>
+                        </div>
+
+                        <div class="card">
+                            <img src="/Contest-Feed/assetes/lunch-svgrepo-com.svg" alt="John" style="width:50%">
+                            <h1>Contest Name</h1>
+                            <p class="cardTitle">Status</p>
+                            <p class="cardOrgName">Organizer Name</p>
+                            <div style="margin: 24px 0;">
+                                <a href="#"><i class="link"></i></a>
+                            </div>
+                            <div class="flex jc-space-between">
+                                <code style="margin-left: 4px; margin-bottom: 4px;">Start time</code>
+                                <code style="margin-right: 4px;">End Time</code>
+                            </div>
+                            <p><button>Apply</button></p>
+                        </div>
+
+                        <div class="card">
+                            <img src="/Contest-Feed/assetes/lunch-svgrepo-com.svg" alt="John" style="width:50%">
+                            <h1>Contest Name</h1>
+                            <p class="cardTitle">Status</p>
+                            <p class="cardOrgName">Organizer Name</p>
+                            <div style="margin: 24px 0;">
+                                <a href="#"><i class="link"></i></a>
+                            </div>
+                            <div class="flex jc-space-between">
+                                <code style="margin-left: 4px; margin-bottom: 4px;">Start time</code>
+                                <code style="margin-right: 4px;">End Time</code>
+                            </div>
+                            <p><button>Apply</button></p>
+                        </div>
+
+                        <div class="card">
+                            <img src="/Contest-Feed/assetes/lunch-svgrepo-com.svg" alt="John" style="width:50%">
+                            <h1>Contest Name</h1>
+                            <p class="cardTitle">Status</p>
+                            <p class="cardOrgName">Organizer Name</p>
+                            <div style="margin: 24px 0;">
+                                <a href="#"><i class="link"></i></a>
+                            </div>
+                            <div class="flex jc-space-between">
+                                <code style="margin-left: 4px; margin-bottom: 4px;">Start time</code>
+                                <code style="margin-right: 4px;">End Time</code>
+                            </div>
+                            <p><button>Apply</button></p>
+                        </div>
+
+                        <div class="card">
+                            <img src="/Contest-Feed/assetes/lunch-svgrepo-com.svg" alt="John" style="width:50%">
+                            <h1>Contest Name</h1>
+                            <p class="cardTitle">Status</p>
+                            <p class="cardOrgName">Organizer Name</p>
+                            <div style="margin: 24px 0;">
+                                <a href="#"><i class="link"></i></a>
+                            </div>
+                            <div class="flex jc-space-between">
+                                <code style="margin-left: 4px; margin-bottom: 4px;">Start time</code>
+                                <code style="margin-right: 4px;">End Time</code>
+                            </div>
+                            <p><button>Apply</button></p>
+                        </div>
+                        <div class="card">
+                            <img src="/Contest-Feed/assetes/lunch-svgrepo-com.svg" alt="John" style="width:50%">
+                            <h1>Contest Name</h1>
+                            <p class="cardTitle">Status</p>
+                            <p class="cardOrgName">Organizer Name</p>
+                            <div style="margin: 24px 0;">
+                                <a href="#"><i class="link"></i></a>
+                            </div>
+                            <div class="flex jc-space-between">
+                                <code style="margin-left: 4px; margin-bottom: 4px;">Start time</code>
+                                <code style="margin-right: 4px;">End Time</code>
+                            </div>
+                            <p><button>Apply</button></p>
+                        </div>
+
+                        <div class="card">
+                            <img src="/Contest-Feed/assetes/lunch-svgrepo-com.svg" alt="John" style="width:50%">
+                            <h1>Contest Name</h1>
+                            <p class="cardTitle">Status</p>
+                            <p class="cardOrgName">Organizer Name</p>
+                            <div style="margin: 24px 0;">
+                                <a href="#"><i class="link"></i></a>
+                            </div>
+                            <div class="flex jc-space-between">
+                                <code style="margin-left: 4px; margin-bottom: 4px;">Start time</code>
+                                <code style="margin-right: 4px;">End Time</code>
+                            </div>
+                            <p><button>Apply</button></p>
+                        </div>
+
+                        <div class="card">
+                            <img src="/Contest-Feed/assetes/lunch-svgrepo-com.svg" alt="John" style="width:50%">
+                            <h1>Contest Name</h1>
+                            <p class="cardTitle">Status</p>
+                            <p class="cardOrgName">Organizer Name</p>
+                            <div style="margin: 24px 0;">
+                                <a href="#"><i class="link"></i></a>
+                            </div>
+                            <div class="flex jc-space-between">
+                                <code style="margin-left: 4px; margin-bottom: 4px;">Start time</code>
+                                <code style="margin-right: 4px;">End Time</code>
+                            </div>
+                            <p><button>Apply</button></p>
+                        </div>
+
+                        <div class="card">
+                            <img src="/Contest-Feed/assetes/lunch-svgrepo-com.svg" alt="John" style="width:50%">
+                            <h1>Contest Name</h1>
+                            <p class="cardTitle">Status</p>
+                            <p class="cardOrgName">Organizer Name</p>
+                            <div style="margin: 24px 0;">
+                                <a href="#"><i class="link"></i></a>
+                            </div>
+                            <div class="flex jc-space-between">
+                                <code style="margin-left: 4px; margin-bottom: 4px;">Start time</code>
+                                <code style="margin-right: 4px;">End Time</code>
+                            </div>
+                            <p><button>Apply</button></p>
+                        </div>
+
+                        <div class="card">
+                            <img src="/Contest-Feed/assetes/lunch-svgrepo-com.svg" alt="John" style="width:50%">
+                            <h1>Contest Name</h1>
+                            <p class="cardTitle">Status</p>
+                            <p class="cardOrgName">Organizer Name</p>
+                            <div style="margin: 24px 0;">
+                                <a href="#"><i class="link"></i></a>
+                            </div>
+                            <div class="flex jc-space-between">
+                                <code style="margin-left: 4px; margin-bottom: 4px;">Start time</code>
+                                <code style="margin-right: 4px;">End Time</code>
+                            </div>
+                            <p><button>Apply</button></p>
+                        </div>
+
+                        <div class="card">
+                            <img src="/Contest-Feed/assetes/lunch-svgrepo-com.svg" alt="John" style="width:50%">
+                            <h1>Contest Name</h1>
+                            <p class="cardTitle">Status</p>
+                            <p class="cardOrgName">Organizer Name</p>
+                            <div style="margin: 24px 0;">
+                                <a href="#"><i class="link"></i></a>
+                            </div>
+                            <div class="flex jc-space-between">
+                                <code style="margin-left: 4px; margin-bottom: 4px;">Start time</code>
+                                <code style="margin-right: 4px;">End Time</code>
+                            </div>
+                            <p><button>Apply</button></p>
+                        </div>
+
                     </div>
                 </div>
 
             </section>
 
 
-            <section>
+            <section id="section3">
 
+                
+                <!-- https://atcoder.jp/contests/ -->
+                <!-- https://www.codechef.com/contests/ -->
+                <!-- https://codeforces.com/api/contest.list -->
+                <!-- https://www.hackerearth.com/chrome-extension/events/ -->
+
+                <!-- https://kontests.net/api/v1/codeforces -->
+                <!-- https://kontests.net/api/v1/code_chef -->
+                <!-- https://kontests.net/api/v1/hacker_earth -->
             </section>
 
         </main>
@@ -65,5 +269,5 @@
 
     <script type="module" src="script.js"></script>
 </body>
-</html>
 
+</html>
