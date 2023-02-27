@@ -8,27 +8,40 @@ window.addEventListener('load', async () => {
     hackerEarthJsonData = await hackerEarthJsonData.json();
 
     createCard(hackerEarthJsonData,'HackerEarth');
+    createCard(codeChefJsonData,'CodeChef');
+    createCard(codeForcesJsonData, 'CodeForce');
 });
 
-function getTimeAndDate(str){
+function getTimeAndDate(str='',name){
     const date = new Date(str);
 
-    // Get the various components of the date
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-    const amPm = hours >= 12 ? 'PM' : 'AM';
-    const hours12 = hours % 12 || 12;
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1; // Note that month is zero-indexed
-    const day = date.getDate();
+    if(name === 'CodeChef'){
 
-    // Format the time string with AM/PM
-    const formattedTime = `${hours12}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} ${amPm}`;
-    const formattedDate = `${year}-${month}-${day}`;
-    // Output the formatted time string
-    return {Time: `Time: ${formattedTime}`,
-            Date: `Date: ${formattedDate}`};
+        let d = str.split(' ')[0];
+        let t = str.split(' ')[1];
+
+
+        return {Date:`Date :${d}`, Time:`Time :${t}`};
+    }
+    else{
+
+        // Get the various components of the date
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+        const seconds = date.getSeconds();
+        const amPm = hours >= 12 ? 'PM' : 'AM';
+        const hours12 = hours % 12 || 12;
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1; // Note that month is zero-indexed
+        const day = date.getDate();
+
+        // Format the time string with AM/PM
+        const formattedTime = `${hours12}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} ${amPm}`;
+        const formattedDate = `${year}-${month}-${day}`;
+        // Output the formatted time string
+        return {Time: `Time: ${formattedTime}`,
+        Date: `Date: ${formattedDate}`};
+    }
 }
 
 
@@ -42,7 +55,20 @@ function createCard(jsonData,param = '') {
 
         // Add the image to the card
         const imgElement = document.createElement('img');
-        imgElement.src = '/assetes/lunch-svgrepo-com.svg';
+
+        if (param === 'HackerEarth') {
+            
+            imgElement.src = '/assetes/cdnlogo.com_hackerearth.svg';
+        }
+        else if (param === 'CodeForce'){
+
+            imgElement.src = '/assetes/code-forces.svg';
+        }
+        else if (param === 'CodeChef'){
+
+            imgElement.src = '/assetes/icons8-codechef.svg';
+
+        }
         imgElement.alt = 'Contest Image';
         imgElement.style.width = '50%';
         cardElement.appendChild(imgElement);
@@ -82,13 +108,6 @@ function createCard(jsonData,param = '') {
         // Add the link icon to the card
         const linkElement = document.createElement('div');
         linkElement.style.margin = '24px 0';
-        const linkIconElement = document.createElement('i');
-        linkIconElement.className = 'link';
-        linkIconElement.textContent = 'visit';
-        const linkAnchorElement = document.createElement('a');
-        linkAnchorElement.href = 'url';
-        linkAnchorElement.appendChild(linkIconElement);
-        linkElement.appendChild(linkAnchorElement);
         cardElement.appendChild(linkElement);
 
 
@@ -98,9 +117,9 @@ function createCard(jsonData,param = '') {
         const startDateElement = document.createElement('code');
         startDateElement.style.marginLeft = '4px';
         startDateElement.style.marginBottom = '4px';
-    
-        let startDate = getTimeAndDate(element.start_time).Date;
-        let endDate = getTimeAndDate(element.end_time).Date; 
+        
+        let startDate = getTimeAndDate(element.start_time,param).Date;
+        let endDate = getTimeAndDate(element.end_time,param).Date; 
 
         startDateElement.textContent = startDate;
         const endDateElement = document.createElement('code');
@@ -118,8 +137,8 @@ function createCard(jsonData,param = '') {
         startTimeElement.style.marginLeft = '4px';
         startTimeElement.style.marginBottom = '4px';
     
-        let startTime = getTimeAndDate(element.start_time).Time;
-        let endTime = getTimeAndDate(element.end_time).Time; 
+        let startTime = getTimeAndDate(element.start_time, param).Time;
+        let endTime = getTimeAndDate(element.end_time, param).Time; 
 
         startTimeElement.textContent = startTime;
         const endTimeElement = document.createElement('code');
@@ -134,7 +153,9 @@ function createCard(jsonData,param = '') {
         const applyButtonElement = document.createElement('button');
         applyButtonElement.textContent = 'Apply';
         cardElement.appendChild(applyButtonElement);
-
+        applyButtonElement.addEventListener('click',()=>{
+            window.open(element.url,'_blank','width=500,height=500');
+        })
 
         // Add the card to the card holder container
         const cardHolderElement = document.getElementById('cardHolder');
@@ -205,3 +226,5 @@ function createCard(jsonData,param = '') {
 
 // // Output the formatted time string
 // console.log(`Time: ${formattedTime}`);
+
+// <a target="_blank" href="https://icons8.com/icon/O4SEeX66BY8o/codechef">Codechef</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
