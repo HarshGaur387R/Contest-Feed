@@ -1,0 +1,23 @@
+{
+  "name": "contest-feed",
+  "version": "1.0.0",
+  "description": "Getting live contests form different websites",
+  "main": "server.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarshGaur387R/Contest-Feed.git"
+  },
+  "author": "Harsh Gaur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HarshGaur387R/Contest-Feed/issues"
+  },
+  "homepage": "https://github.com/HarshGaur387R/Contest-Feed#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
