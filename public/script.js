@@ -38,7 +38,7 @@ function getTimeAndDate(str='',name){
         // Format the time string with AM/PM
         const formattedTime = `${hours12}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} ${amPm}`;
         const formattedDate = `${year}-${month}-${day}`;
-        // Output the formatted time string
+      
         return {Time: `Time: ${formattedTime}`,
         Date: `Date: ${formattedDate}`};
     }
@@ -163,68 +163,69 @@ function createCard(jsonData,param = '') {
     });    
 }
 
+let All = document.getElementById('All');
+let HackerEarth = document.getElementById('HackerEarth');
+let CodeChef = document.getElementById('CodeChef');
+let CodeForces = document.getElementById('CodeForces');
 
-// TODO : Write program to create cards for given data:
+All.addEventListener('click',async ()=>{
 
-/*
+    const cardHolderElement = document.getElementById('cardHolder');
+    cardHolderElement.replaceChildren();
+    
+    let codeForcesJsonData = await fetch('https://kontests.net/api/v1/codeforces');
+    let codeChefJsonData = await fetch('https://kontests.net/api/v1/code_chef');
+    let hackerEarthJsonData = await fetch('https://kontests.net/api/v1/hacker_earth');
 
-{
-    duration: "4325340.0",
-​​
-    end_time: "2023-02-28T20:40:00.000Z",
-​​
-    in_24_hours: "No",
-​​
-    name: "Build a Web App for Millions of Users",
-​​
-    start_time: "2023-01-09T19:11:00.000Z",
-​​
-    status: "CODING",
-​​
-    type_: "Monthly Challenges", (only hackerearth have type object)
-​​
-    url: "https://pinetwork.hackerearth.com/"
-}
+    codeForcesJsonData = await codeForcesJsonData.json();
+    codeChefJsonData = await codeChefJsonData.json();
+    hackerEarthJsonData = await hackerEarthJsonData.json();
 
-*/
+    createCard(hackerEarthJsonData,'HackerEarth');
+    createCard(codeChefJsonData,'CodeChef');
+    createCard(codeForcesJsonData, 'CodeForce');
+    
+});
 
-// const dateString = '2023-01-09T19:11:00.000Z';
-// const date = new Date(dateString);
+HackerEarth.addEventListener('click',async ()=>{
 
-// // Get the various components of the date
-// const year = date.getFullYear();
-// const month = date.getMonth() + 1; // Note that month is zero-indexed
-// const day = date.getDate();
-// const hours = date.getHours();
-// const minutes = date.getMinutes();
-// const seconds = date.getSeconds();
+    const cardHolderElement = document.getElementById('cardHolder');
+    cardHolderElement.replaceChildren();
 
-// // Format the date and time string
-// const formattedDate = `${year}-${month}-${day}`;
-// const formattedTime = `${hours}:${minutes}:${seconds}`;
+    let hackerEarthJsonData = await fetch('https://kontests.net/api/v1/hacker_earth');
+    hackerEarthJsonData = await hackerEarthJsonData.json();
 
-// // Output the formatted date and time string
-// console.log(`Date: ${formattedDate}`);
-// console.log(`Time: ${formattedTime}`);
+    createCard(hackerEarthJsonData,'HackerEarth');
+
+});
 
 
+CodeChef.addEventListener('click',async ()=>{
+
+    const cardHolderElement = document.getElementById('cardHolder');
+    cardHolderElement.replaceChildren();
+
+    let codeChefJsonData = await fetch('https://kontests.net/api/v1/code_chef');
+    codeChefJsonData = await codeChefJsonData.json();
+
+    createCard(codeChefJsonData,'CodeChef');
+
+});
+
+CodeForces.addEventListener('click',async ()=>{
+
+    let cardHolderElement = document.getElementById('cardHolder');
+    cardHolderElement.replaceChildren();
+
+    let codeForcesJsonData = await fetch('https://kontests.net/api/v1/codeforces');
+    codeForcesJsonData = await codeForcesJsonData.json();
 
 
+    createCard(codeForcesJsonData, 'CodeForce');
 
-// const dateString = '2023-01-09T19:11:00.000Z';
-// const date = new Date(dateString);
+});
 
-// // Get the various components of the date
-// const hours = date.getHours();
-// const minutes = date.getMinutes();
-// const seconds = date.getSeconds();
-// const amPm = hours >= 12 ? 'PM' : 'AM';
-// const hours12 = hours % 12 || 12;
 
-// // Format the time string with AM/PM
-// const formattedTime = `${hours12}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} ${amPm}`;
-
-// // Output the formatted time string
-// console.log(`Time: ${formattedTime}`);
+// CodeChf icon:-
 
 // <a target="_blank" href="https://icons8.com/icon/O4SEeX66BY8o/codechef">Codechef</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
