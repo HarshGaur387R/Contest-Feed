@@ -13,6 +13,7 @@
 }
 
 body {
+    overflow-x: hidden;
     background-color: black;
 }
 
@@ -40,10 +41,9 @@ body {
     border: 2px solid darkcyan;
 }
 
-
-
-
 #section1 {
+    border-top:1px solid darkcyan;
+    text-align: left;
     font-family: 'inter';
     height: 100vh;
     width: 100vW;
@@ -51,50 +51,38 @@ body {
     background-size: cover;
     border-bottom: 2px solid darkcyan;
     color: white;
-    position: relative;
 }
 
-#section1::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 139, 139, 0.104);
-    z-index: 1;
+#titleContainer{
+    margin-top: 180px;
+    padding-left: 60px;
 }
+
 
 #title {
-    position: relative;
+    line-height: 90px;
     font-weight: 600;
     font-family: Geneva, Tahoma, sans-serif;
     text-shadow: 0px 0px 10px darkcyan, 0px 0px 5px white;
-    font-size: 100px;
-    margin-left: 20px;
-    padding-top: 10rem;
-    line-height: 120px;
-    z-index: 2;
 }
 
 
-#title div {
-    position: relative;
-    font-size: 170px;
-    margin-left: -10px;
-    z-index: 2;
+#liveCodingTitle {
+    font-size: 60px;
+}
+
+#contestTitle{
+    font-size: 120px;
 }
 
 #description {
-    position: relative;
-    margin-top: 20px;
+    line-height: 20px;
+    margin-top: 60px;
     text-align: left;
     width: 740px;
-    margin-left: 30px;
-    line-height: 20px;
     color: white;
     font-family: Helvetica;
     text-shadow: 0px 0px 10px darkcyan, 0px 0px 5px white;
-    z-index: 2;
-
 }
 
 #section2 {
