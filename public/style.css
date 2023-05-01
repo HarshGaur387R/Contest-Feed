@@ -2,14 +2,11 @@
     margin: 0%;
     padding: 0%;
 }
-
-
-#navbar {
+header{
     position: fixed;
     width: 100%;
     background-color: rgb(0, 0, 0, 0.4);
     z-index: 4;
-    padding-top: 5px;
 }
 
 body {
@@ -42,7 +39,7 @@ body {
 }
 
 #section1 {
-    border-top:1px solid darkcyan;
+    border-top:1px solid transparent;
     text-align: left;
     font-family: 'inter';
     height: 100vh;
@@ -54,13 +51,12 @@ body {
 }
 
 #titleContainer{
+    padding-left: 2vw;
     margin-top: 180px;
-    padding-left: 60px;
 }
 
 
 #title {
-    line-height: 90px;
     font-weight: 600;
     font-family: Geneva, Tahoma, sans-serif;
     text-shadow: 0px 0px 10px darkcyan, 0px 0px 5px white;
@@ -68,18 +64,21 @@ body {
 
 
 #liveCodingTitle {
-    font-size: 60px;
+    font-size: clamp(30px, 7vw, 80px);
+
 }
 
 #contestTitle{
-    font-size: 120px;
+    font-size: clamp(50px, 11vw, 120px);
+
 }
 
 #description {
-    line-height: 20px;
-    margin-top: 60px;
+    font-size: clamp(5px, 7vw, 10px);
+    line-height: 15px;
+    margin-top: 20px;
     text-align: left;
-    width: 740px;
+    max-width: 640px;
     color: white;
     font-family: Helvetica;
     text-shadow: 0px 0px 10px darkcyan, 0px 0px 5px white;
@@ -102,7 +101,7 @@ body {
 #searchBox select {
     font-family: 'kanit';
     text-align: center;
-    width: 400px;
+    min-width: 300px;
     padding: 4px;
     font-size: 20px;
     border-radius: 0%;
@@ -110,7 +109,7 @@ body {
     border: 1px solid white;
     box-shadow: 0px 0px 1px 2px darkcyan, inset 1px 1px 10px 0px darkcyan;
     text-shadow: 0px 0px 25px white;
-    background-color: transparent;
+    background-color: black;
 
 }
 
@@ -232,9 +231,23 @@ body {
     opacity: 0.7;
 }
 
-
-
-/* #section3{
-     width: 100vw;
-    height: 100vh; 
-} */
+@media only screen and (max-width: 840px) {
+    /* #liveCodingTitle {
+        font-size: 40px;
+    }
+    
+    #contestTitle{
+        font-size: 100px;
+    }
+    
+    #description {
+        font-size: 10px;
+        line-height: 20px;
+        margin-top: 60px;
+        text-align: left;
+        width: 740px;
+        color: white;
+        font-family: Helvetica;
+        text-shadow: 0px 0px 10px darkcyan, 0px 0px 5px white;
+    } */
+  }
