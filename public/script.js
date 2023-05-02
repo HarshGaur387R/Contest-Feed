@@ -20,7 +20,6 @@ function getTimeAndDate(str='',name){
         let d = str.split(' ')[0];
         let t = str.split(' ')[1];
 
-
         return {Date:`Date :${d}`, Time:`Time :${t}`};
     }
     else{
@@ -46,7 +45,7 @@ function getTimeAndDate(str='',name){
 
 
 function createCard(jsonData,param = '') {
-    
+
     jsonData.forEach(element => {
         // Create a new card element
         const cardElement = document.createElement('div');
@@ -168,62 +167,56 @@ let HackerEarth = document.getElementById('HackerEarth');
 let CodeChef = document.getElementById('CodeChef');
 let CodeForces = document.getElementById('CodeForces');
 
-All.addEventListener('click',async ()=>{
 
-    const cardHolderElement = document.getElementById('cardHolder');
-    cardHolderElement.replaceChildren();
+document.getElementById('selectType').onchange = async (event)=>{
+    if(event.target.value === 'All' ){
+        const cardHolderElement = document.getElementById('cardHolder');
+        cardHolderElement.replaceChildren();
+        
+        let codeForcesJsonData = await fetch('https://kontests.net/api/v1/codeforces');
+        let codeChefJsonData = await fetch('https://kontests.net/api/v1/code_chef');
+        let hackerEarthJsonData = await fetch('https://kontests.net/api/v1/hacker_earth');
     
-    let codeForcesJsonData = await fetch('https://kontests.net/api/v1/codeforces');
-    let codeChefJsonData = await fetch('https://kontests.net/api/v1/code_chef');
-    let hackerEarthJsonData = await fetch('https://kontests.net/api/v1/hacker_earth');
-
-    codeForcesJsonData = await codeForcesJsonData.json();
-    codeChefJsonData = await codeChefJsonData.json();
-    hackerEarthJsonData = await hackerEarthJsonData.json();
-
-    createCard(hackerEarthJsonData,'HackerEarth');
-    createCard(codeChefJsonData,'CodeChef');
-    createCard(codeForcesJsonData, 'CodeForce');
+        codeForcesJsonData = await codeForcesJsonData.json();
+        codeChefJsonData = await codeChefJsonData.json();
+        hackerEarthJsonData = await hackerEarthJsonData.json();
     
-});
+        createCard(hackerEarthJsonData,'HackerEarth');
+        createCard(codeChefJsonData,'CodeChef');
+        createCard(codeForcesJsonData, 'CodeForce');
+    }
 
-HackerEarth.addEventListener('click',async ()=>{
+    else if(event.target.value === 'HackerEarth'){
+        const cardHolderElement = document.getElementById('cardHolder');
+        cardHolderElement.replaceChildren();
+    
+        let hackerEarthJsonData = await fetch('https://kontests.net/api/v1/hacker_earth');
+        hackerEarthJsonData = await hackerEarthJsonData.json();
+    
+        createCard(hackerEarthJsonData,'HackerEarth');
+    }
 
-    const cardHolderElement = document.getElementById('cardHolder');
-    cardHolderElement.replaceChildren();
-
-    let hackerEarthJsonData = await fetch('https://kontests.net/api/v1/hacker_earth');
-    hackerEarthJsonData = await hackerEarthJsonData.json();
-
-    createCard(hackerEarthJsonData,'HackerEarth');
-
-});
-
-
-CodeChef.addEventListener('click',async ()=>{
-
-    const cardHolderElement = document.getElementById('cardHolder');
-    cardHolderElement.replaceChildren();
-
-    let codeChefJsonData = await fetch('https://kontests.net/api/v1/code_chef');
-    codeChefJsonData = await codeChefJsonData.json();
-
-    createCard(codeChefJsonData,'CodeChef');
-
-});
-
-CodeForces.addEventListener('click',async ()=>{
-
-    let cardHolderElement = document.getElementById('cardHolder');
-    cardHolderElement.replaceChildren();
-
-    let codeForcesJsonData = await fetch('https://kontests.net/api/v1/codeforces');
-    codeForcesJsonData = await codeForcesJsonData.json();
+    else if(event.target.value === 'CodeChef'){
+        const cardHolderElement = document.getElementById('cardHolder');
+        cardHolderElement.replaceChildren();
+    
+        let codeChefJsonData = await fetch('https://kontests.net/api/v1/code_chef');
+        codeChefJsonData = await codeChefJsonData.json();
+    
+        createCard(codeChefJsonData,'CodeChef');
+    }
+    else if(event.target.value === 'CodeForces'){
+        let cardHolderElement = document.getElementById('cardHolder');
+        cardHolderElement.replaceChildren();
+    
+        let codeForcesJsonData = await fetch('https://kontests.net/api/v1/codeforces');
+        codeForcesJsonData = await codeForcesJsonData.json();
+    
+        createCard(codeForcesJsonData, 'CodeForce');
+    }
 
 
-    createCard(codeForcesJsonData, 'CodeForce');
-
-});
+}
 
 // CodeChef icon:-
 

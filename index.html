@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contests-Feed</title>
-    <!-- <link type="text/css" href="styles.css"> -->
-    <!-- <link type="text/css" href="util.css"> -->
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/util.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,6 +39,10 @@
         .topnav .icon {
           display: none;
         }
+
+        .topnav:nth-child(1) img{
+            scale: 2.5;
+        }
         
         @media screen and (max-width: 600px) {
           .topnav a:not(:first-child) {display: none;}
@@ -72,8 +74,7 @@
 
         <header>
             <div class="topnav" id="myTopnav">
-                <a href="#home" class="active"><img src="\assetes\contest-feed-croped-logo.png" width="100px" alt="logo"></a>
-                <a href="#news">News</a>
+                <a href="#home" class="active"><img src="\assetes\contest-feed-only-logo.png" width="15px" alt="logo"></a>
                 <a href="#contact">Contact</a>
                 <a href="#about">About</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -109,13 +110,12 @@
                         contests. Happy coding!
                     </div>
                 </div>
-
             </section>
 
             <section id="section2" class="flex jc-center ai-center f-direction-column">
 
                 <div id="searchBox" class="flex jc-center">
-                    <select name="select" id="selectType">
+                    <select id="selectType" aria-label="label for the select">
                         <option id="All" value="All">All</option>
                         <option id="HackerEarth" value="HackerEarth">HackerEarth</option>
                         <option id="CodeChef" value="CodeChef">CodeChef</option>
@@ -149,6 +149,7 @@
         <footer></footer>
 
     </div>
+    <script type="text/javascript" src="/script.js"></script>
     <script>
         function myFunction() {
           var x = document.getElementById("myTopnav");
@@ -159,7 +160,6 @@
           }
         }
         </script>
-    <script type="text/javascript" src="/script.js"></script>
 </body>
 
 </html>
