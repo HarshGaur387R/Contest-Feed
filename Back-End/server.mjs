@@ -21,6 +21,10 @@ app.get('/contact', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'contact.html'));
 });
 
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'about.html'));
+});
+
 
 // Define a route that fetches contest data from an external API
 app.get('/contests/codeforces', async (req, res) => {

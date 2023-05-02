@@ -72,7 +72,7 @@
             <div class="topnav" id="myTopnav">
                 <a href="/" class="active"><img src="\assetes\contest-feed-only-logo.png" width="15px" alt="logo"></a>
                 <a href="/contact">Contact</a>
-                <a href="/">About</a>
+                <a href="/about">About</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                   <i class="fa fa-bars"></i>
                 </a>
@@ -115,5 +115,15 @@
 
         </footer>
     </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
 </body>
 </html>
