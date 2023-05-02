@@ -26,4 +26,4 @@ If you find any issues with the Contest Feed Web App, please feel free to open a
 
 # Credits
 
-Contest Feed Web App was created by [Your Name] and is licensed under the [MIT License](https://opensource.org/licenses/MIT). The project is based on the API of Hackerearth, Codeforces, and Codechef.
+Contest Feed Web App was created by [Harsh Gaur] and is licensed under the [MIT License](https://opensource.org/licenses/MIT). The project is based on the API of Hackerearth, Codeforces, and Codechef.
