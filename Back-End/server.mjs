@@ -76,5 +76,3 @@ app.listen(port, () => {
 // In this example, we're using the express package to create the server, and the path package to help us locate the index.html file. We're also serving any static files (like images or CSS files) from the public directory using express.static().
 
 // To run the server, you would navigate to the Back-End directory in your terminal and run the command node server.js. This would start the server on port 3000, and you could access the website by visiting http://localhost:3000 in your web browser.
-
-// Note that this is just a basic example - you may need to modify the server code to fit your specific requirements (for example, if you need to handle API requests or use a database).
